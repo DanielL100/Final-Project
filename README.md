@@ -104,6 +104,6 @@ Below the run button there is a scope that displays the tracking error in the el
 > [!IMPORTANT]
 > The desired scopes must be opened before pressing the run button, in order to observe the system operation during runtime.
 
-> [!NOTE]
+> [!CAUTION]
 > Do not click the scope below the run button. It opens automatically when the simulation starts.
 > Closing it after it opens will speed up the simulation run.
