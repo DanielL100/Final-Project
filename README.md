@@ -41,14 +41,16 @@ Each axis is divided into 3 areas:
 <img src="./doc_images/Gun_system.png" width="350" alt="Screenshot of the GUI of the gun system panel" title="Screenshot of the GUI of the gun system panel" />
 
 On the left side of the panel, you can control the following components:
-1. Adding ground disturbances to the system
-2. Adding friction to the physical modeling of the system
-3. The left switch - adding an anti-friction feedforward technique
+1. Adding ground disturbances to the system.
+2. Adding friction to the physical modeling of the system.
+3. The left switch - adding an anti-friction feedforward technique, the right switch - adding a shear feedforward technique.
+4. Adding backlash to the physical modeling of the system.
+5. The left switch - closing a loop for the system, the right switch - closing a tachometric (up) or gyroscopic loop (down).
+6. The left switch - inserting a step (up) or an external signal (down), the right switch - selecting the step height to be 1 (up) or 0.05 (down).
 
-   The right switch - adding a shear feedforward technique.
-4. Adding backlash to the physical modeling of the system
-5. The left switch - closing a loop for the system
-
-   The right switch - closing a tachometric (up) or gyroscopic loop (down)
-6. The left switch - inserting a step (up) or an external signal (down)
-   The right switch - selecting the step height to be 1 (up) or 0.05 (down)
+On the right side of the panel, the following signals can be viewed by double-clicking on the appropriate scope:
+1. Gun system angle relative to the ground as measured by the gyroscopic mode.
+2. Gun system speed relative to the ground as measured by the gyroscopic mode.
+3. Gun system speed relative to the engine as measured by the tachometric mode.
+4. Ground disturbance input.
+5. Fire recoil from the gun.
