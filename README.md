@@ -12,9 +12,16 @@ The project was built by:
 ## Getting Started
 
 #### Prerequisites
-* Matlab R2020b or later
+* Matlab version R2020b or later
 * Simulink
 * [Project directory](Project)
+
+#### Installetion
+1. Download and install Matlab with Simulink from [Matlab website]((https://www.mathworks.com/products/matlab.html))
+2. Download the [Project directory](Project).
+3. Change the folder path in Matlab to the location of the folder from previous stage.
+4. Run the 'load_files.m' file in Matlab.
+5. Open the '.slx' file in Simulink.
 
 
 ## Usage
