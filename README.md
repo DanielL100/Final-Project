@@ -9,6 +9,29 @@ The project was built by:
 
 ## Project Overview
 
+The project system focuses on stability control and inertial stabilization of rotating weapon systems. The mechanical system consists of a rotating body (the gun), connected to an electric servo motor through a gear system. The mechanical connection between the motor and the rotating body is described in a physical model known as a "molecule", in which the moments of inertia, stiffness and restraint of the gear are represented as a spring and a rotary damper
+
+The system operates in two main modes of operation:
+1. Torque Mode: In this mode, the system uses the measurements of the relative angular velocity of the tachometer, to generate appropriate current commands to the motor. The commands are controlled by PI controllers and pure gain controllers, which allow for accurate and fast response for the purposes of direct control of the force applied to the load.
+2. Stabilization Mode: In stabilization mode, a gyroscope sensor is used to measure the angular velocity of the rotating body relative to the ground, enabling inertial stability control. In this mode, the system neutralizes external disturbances such as ground disturbances, friction, imbalance, and mechanical freedom (backlash) using advanced control techniques (such as notch-filters, anti-friction, and differentiator) to maintain the angle of the gun stable and inertial.
+
+### The Molecular Model
+The molecular model is a simulation approach to platform control, consisting of models of nonlinear components such as friction, inertia, and free moments. The name "molecule" refers to the description of complex processes using simple elements connected in a structure that simulates a mechanical system with freedom of movement, restraint, and stiffness. Using this model, we divided the system into inertial blocks (assemblies). Each inertial block is characterized by a moment (units of Newton∙meter). Any two such blocks can be described as a driving block and a driven block, the dynamics between which can be described as a spring and a restrainer.
+
+<img src="./doc_images/molecule.png" width="350" alt="The Molecular Model" title="The Molecular Model" />
+
+### Physical modeling
+
+### Linear Control
+
+### Non-Linear Control
+
+### Enslavement
+
+### Block Diagram of the Complete System
+
+<img src="./doc_images/Block_Diagaram.png" width="350" alt="Block Diagram of the Complete System" title="Block Diagram of the Complete System" />
+
 ## Getting Started
 
 ### Prerequisites
