@@ -16,7 +16,7 @@ The project was built by:
 * Simulink
 * [Project directory](Project)
 
-### Installetion
+### Installation
 1. Download and install Matlab with Simulink from [Matlab website](https://www.mathworks.com/products/matlab.html).
 2. Download the [Project directory](Project).
 3. Change the folder path in Matlab to the location of the folder from previous stage.
