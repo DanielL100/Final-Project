@@ -37,5 +37,18 @@ Each axis is divided into 3 areas:
 2. Optics system (called Pod)
 3. Tracking execution
 
-#### Weapon system
-<img src="./doc_images/Gun_system.png" width="350" />
+#### Weapon system panel
+<img src="./doc_images/Gun_system.png" width="350" alt="Screenshot of the GUI of the gun system panel" title="Screenshot of the GUI of the gun system panel" />
+
+On the left side of the panel, you can control the following components:
+1. Adding ground disturbances to the system
+2. Adding friction to the physical modeling of the system
+3. The left switch - adding an anti-friction feedforward technique
+
+   The right switch - adding a shear feedforward technique.
+4. Adding backlash to the physical modeling of the system
+5. The left switch - closing a loop for the system
+
+   The right switch - closing a tachometric (up) or gyroscopic loop (down)
+6. The left switch - inserting a step (up) or an external signal (down)
+   The right switch - selecting the step height to be 1 (up) or 0.05 (down)
