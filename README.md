@@ -33,6 +33,9 @@ The system is divided into 3 parts:
 
 #### Axis control
 Each axis is divided into 3 areas:
-1. Weapon system
-2. Observation system
+1. Gun system
+2. Optics system (called Pod)
 3. Tracking execution
+
+#### Weapon system
+![Screenshot of the gun system block from Simulink GUI](doc Images/Gun system.png)
