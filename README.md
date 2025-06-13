@@ -11,13 +11,13 @@ The project was built by:
 
 ## Getting Started
 
-#### Prerequisites
+### Prerequisites
 * Matlab version R2020b or later
 * Simulink
 * [Project directory](Project)
 
-#### Installetion
-1. Download and install Matlab with Simulink from [Matlab website]((https://www.mathworks.com/products/matlab.html))
+### Installetion
+1. Download and install Matlab with Simulink from [Matlab website](https://www.mathworks.com/products/matlab.html).
 2. Download the [Project directory](Project).
 3. Change the folder path in Matlab to the location of the folder from previous stage.
 4. Run the 'load_files.m' file in Matlab.
@@ -29,9 +29,9 @@ Inside Simulink, double-click the GUI block, from where the entire system is con
 
 The system is divided into 3 parts:
 - 2 axes - the elevation axis (at the top of the GUI) and the Traverse axis (at the bottom of the GUI). The control of each axis is independent of the other axis.
-- A 'Run' button with a scope below it
+- A 'Run' button with a scope below it.
 
-#### Axis Control
+### Axis Control
 Each axis is divided into 3 areas:
 1. Gun system
 2. Optics system (called Pod)
@@ -92,7 +92,7 @@ On the right side of the panel, the following signals can be viewed by double-cl
    - Tracking input
    - Tracking error
 
-#### Running Panel
+### Running Panel
 <img src="./doc_images/Run.png" width="350" alt="Screenshot of the GUI of the run panel" title="Screenshot of the GUI of the run panel" />
 
 Clicking the run button will run the simulation.
