@@ -26,7 +26,8 @@ The project was built by:
 
 ## Usage
 Inside Simulink, double-click the GUI block, from where the entire system is controlled.
-First, the system is divided into 3 parts:
+
+The system is divided into 3 parts:
 - 2 axes - the elevation axis (at the top of the GUI) and the Traverse axis (at the bottom of the GUI). The control of each axis is independent of the other axis.
 - A 'Run' button with a scope below it
 
