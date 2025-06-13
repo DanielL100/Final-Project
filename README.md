@@ -12,8 +12,8 @@ The project was built by:
 The project system focuses on stability control and inertial stabilization of rotating weapon systems. The mechanical system consists of a rotating body (the gun), connected to an electric servo motor through a gear system. The mechanical connection between the motor and the rotating body is described in a physical model known as a "molecule", in which the moments of inertia, stiffness and restraint of the gear are represented as a spring and a rotary damper
 
 The system operates in two main modes of operation:
-1. Torque Mode: In this mode, the system uses the measurements of the relative angular velocity of the tachometer, to generate appropriate current commands to the motor. The commands are controlled by PI controllers and pure gain controllers, which allow for accurate and fast response for the purposes of direct control of the force applied to the load.
-2. Stabilization Mode: In stabilization mode, a gyroscope sensor is used to measure the angular velocity of the rotating body relative to the ground, enabling inertial stability control. In this mode, the system neutralizes external disturbances such as ground disturbances, friction, imbalance, and mechanical freedom (backlash) using advanced control techniques (such as notch-filters, anti-friction, and differentiator) to maintain the angle of the gun stable and inertial.
+* Torque Mode: In this mode, the system uses the measurements of the relative angular velocity of the tachometer, to generate appropriate current commands to the motor. The commands are controlled by PI controllers and pure gain controllers, which allow for accurate and fast response for the purposes of direct control of the force applied to the load.
+* Stabilization Mode: In stabilization mode, a gyroscope sensor is used to measure the angular velocity of the rotating body relative to the ground, enabling inertial stability control. In this mode, the system neutralizes external disturbances such as ground disturbances, friction, imbalance, and mechanical freedom (backlash) using advanced control techniques (such as notch-filters, anti-friction, and differentiator) to maintain the angle of the gun stable and inertial.
 
 ### Sensors in the system
 
@@ -45,6 +45,28 @@ This is to meet a number of defined requirements:
 - Gain margin of over 6 dB
 
 ### Non-Linear Control
+
+To perform a simulation that is true to reality, we added nonlinear elements that should increase the accuracy of the simulation.
+
+#### Coulomb friction
+In the connection of gears, a constant resistance torque T<sub>coulomb</sub> appears that changes sign with the direction of rotation.
+In our model it is represented as:<br>
+$T_{Coulomb\  friction}=T_Q*sign(ω)$<br>
+where $ω$ is the angular velocity measured by the tachometer/gyroscope.
+
+#### Backlash
+
+In gears there is a tiny gap $Δθ$ where the rotation of the drive gear still does not move the load gear. To measure the gap, the motor is started very slowly, the angle of the motor and the load is monitored, and the “jump” required until the load begins to respond is identified. In the Simulink model, the freedom is described as a Dead-Zone, as long as the difference $θ_m-θ_L$ is less than $Δθ$, there is no torque transfer.
+
+#### Unbalance
+
+When the center of gravity of the barrel or auxiliary equipment is mounted at a distance $r$ from the axis of rotation, a cyclic torque is created whose magnitude varies with the angle of rotation $θ$. This is because the weight $mg$ acts off the centerline, and therefore tries to tilt the system with each rotation. To estimate the torque, low-speed rotation is performed in an open circuit, the motor current is measured in the “up” and “down” directions, and the average is translated into the $T_UB$ value and similarly for the traverse axis.
+
+#### Fire Recoil
+
+With each shot, a strong blow is released back along the barrel axis, creating a short but very large acceleration. To measure it, high-G range accelerometers were mounted near the barrel. The sensors recorded the acceleration of the blow, and after integration, the angular deviation created immediately after the shot is calculated from it.
+
+### FeedForward Techniques
 
 ### Enslavement
 
