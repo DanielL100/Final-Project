@@ -14,7 +14,7 @@ The project was built by:
 #### Prerequisites
 * Matlab R2020b or later
 * Simulink
-* Project directory(Project.md)
+* [Project directory](Project.md)
 
 
 ## Usage
