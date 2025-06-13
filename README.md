@@ -31,13 +31,13 @@ The system is divided into 3 parts:
 - 2 axes - the elevation axis (at the top of the GUI) and the Traverse axis (at the bottom of the GUI). The control of each axis is independent of the other axis.
 - A 'Run' button with a scope below it
 
-#### Axis control
+#### Axis Control
 Each axis is divided into 3 areas:
 1. Gun system
 2. Optics system (called Pod)
 3. Tracking execution
 
-#### Gun system panel
+#### Gun System Panel
 <img src="./doc_images/Gun_system.png" width="350" alt="Screenshot of the GUI of the gun system panel" title="Screenshot of the GUI of the gun system panel" />
 
 On the left side of the panel, you can control the following components:
@@ -55,7 +55,7 @@ On the right side of the panel, the following signals can be viewed by double-cl
 4. Ground disturbance input.
 5. Fire recoil from the gun.
 
-#### Pod system panel
+#### Pod System Panel
 <img src="./doc_images/Pod_system.png" width="350" alt="Screenshot of the GUI of the pod system panel" title="Screenshot of the GUI of the pod system panel" />
 
 On the left side of the panel, you can control the following components:
@@ -74,7 +74,7 @@ On the right side of the panel, the following signals can be viewed by double-cl
 2. Pod system speed relative to the ground as measured by the gyroscopic mode.
 3. Pod system speed relative to the engine as measured by the tachometric mode.
 
-#### Tracking panel
+#### Tracking Panel
 <img src="./doc_images/Tracking.png" width="350" alt="Screenshot of the GUI of the tracking panel" title="Screenshot of the GUI of the tracking panel" />
 
 On the left side of the panel you can control:
@@ -86,9 +86,24 @@ On the right side of the panel, the following signals can be viewed by double-cl
 1. Error signal between weapon angle and pod angle.
 2. Integrated control scope including:
    - Ground disturbances entering the system
-   - Firing halyards
+   - Fire recoil
    - Weapon angle
    - Pod angle
    - Tracking input
    - Tracking error
 
+#### Running Panel
+<img src="./doc_images/Run.png" width="350" alt="Screenshot of the GUI of the run panel" title="Screenshot of the GUI of the run panel" />
+
+Clicking the run button will run the simulation.
+
+The simulation time will vary depending on the selections made in the switches and will be determined by the more stringent axis.
+
+Below the run button there is a scope that displays the tracking error in the elevation axis as a function of the tracking error in the traverse axis. It displays approximately the last 15 seconds.
+
+> [!IMPORTANT]
+> The desired scopes must be opened before pressing the run button, in order to observe the system operation during runtime.
+
+> [!NOTE]
+> Do not click the scope below the run button. It opens automatically when the simulation starts.
+> Closing it after it opens will speed up the simulation run.
