@@ -37,13 +37,13 @@ Each axis is divided into 3 areas:
 2. Optics system (called Pod)
 3. Tracking execution
 
-#### Weapon system panel
+#### Gun system panel
 <img src="./doc_images/Gun_system.png" width="350" alt="Screenshot of the GUI of the gun system panel" title="Screenshot of the GUI of the gun system panel" />
 
 On the left side of the panel, you can control the following components:
 1. Adding ground disturbances to the system.
 2. Adding friction to the physical modeling of the system.
-3. The left switch - adding an anti-friction feedforward technique, the right switch - adding a shear feedforward technique.
+3. The left switch - adding an anti-friction feedforward technique, the right switch - adding a differentiator feedforward technique.
 4. Adding backlash to the physical modeling of the system.
 5. The left switch - closing a loop for the system, the right switch - closing a tachometric (up) or gyroscopic loop (down).
 6. The left switch - inserting a step (up) or an external signal (down), the right switch - selecting the step height to be 1 (up) or 0.05 (down).
@@ -54,3 +54,41 @@ On the right side of the panel, the following signals can be viewed by double-cl
 3. Gun system speed relative to the engine as measured by the tachometric mode.
 4. Ground disturbance input.
 5. Fire recoil from the gun.
+
+#### Pod system panel
+<img src="./doc_images/Pod_system.png" width="350" alt="Screenshot of the GUI of the pod system panel" title="Screenshot of the GUI of the pod system panel" />
+
+On the left side of the panel, you can control the following components:
+1. Connecting the gun system to the observation pod.
+2. Adding friction to the physical modeling of the system.
+3. Adding a feedforward technique.
+4. Adding backlash to the physical modeling of the system.
+5. The left switch - closing a loop for the system, the right switch - closing a tachometric (up) or gyroscopic loop (down).
+6. The left switch - inserting a step (up) or an external signal (down), the right switch - if the tracking signal is a step - selecting the step height to be 1 (up) or 0.05 (down).
+
+> [!NOTE]
+> It is not possible to introduce ground disturbances into only one of the systems since the enslavement is based, among other things, on the fact that the two systems experience the same disturbances and therefore the subtraction between them manages to overcome the disturbances.
+
+On the right side of the panel, the following signals can be viewed by double-clicking on the appropriate scope:
+1. Pod system angle relative to the ground as measured by the gyroscopic mode.
+2. Pod system speed relative to the ground as measured by the gyroscopic mode.
+3. Pod system speed relative to the engine as measured by the tachometric mode.
+
+#### Tracking panel
+<img src="./doc_images/Tracking.png" width="350" alt="Screenshot of the GUI of the tracking panel" title="Screenshot of the GUI of the tracking panel" />
+
+On the left side of the panel you can control:
+1. Whether to insert a tracking signal into the observation pod.
+2. Whether the tracking signal will be the given signal (up) or a step signal (down).
+3. If the tracking signal is a step - is it at a height of 1 (up) or 0.05 (down).
+
+On the right side of the panel, the following signals can be viewed by double-clicking on the appropriate scope:
+1. Error signal between weapon angle and pod angle.
+2. Integrated control scope including:
+   - Ground disturbances entering the system
+   - Firing halyards
+   - Weapon angle
+   - Pod angle
+   - Tracking input
+   - Tracking error
+
