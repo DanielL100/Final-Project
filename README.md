@@ -11,6 +11,10 @@ The project was built by:
 
 ## Getting Started
 
+#### Prerequisites
+* Matlab R2020b or later
+* Simulink
+* Project directory(Project.md)
 
 
 ## Usage
