@@ -38,4 +38,4 @@ Each axis is divided into 3 areas:
 3. Tracking execution
 
 #### Weapon system
-![Screenshot of the gun system block from Simulink GUI](doc Images/Gun system.png)
+<img src="./doc_images/Gun_system.png" width="350" />
