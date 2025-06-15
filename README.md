@@ -68,6 +68,14 @@ With each shot, a strong blow is released back along the barrel axis, creating a
 
 ### FeedForward Techniques
 
+The ground disturbances are measured by attaching a gyroscope to the gun on each axis and measuring when the vehicle is traveling on a track with a speed of 25 km/h. The disturbance velocity measurement $ω_{disturbance}$ is derived in time and converted to a moment of inertia, using the motor inertia J_M :<br>
+$I_{diff}^{Control}=-J_M/K_T ⋅d/{dt}(ω_disturbance)$<br>
+This contribution returns a current proportional to the disturbance acceleration to the motor.
+
+To deal with the friction, an anti-friction is used: <br>
+$I_{friction}^{Control}=- T_Q/K_T ⋅sign(ω)$<br>
+Multiplying $T_Q$ by the current constant $1/{K_T}$ yields a current that cancels the friction at the mechanical level, and the use of the minus sign allows the effect of friction on the system to be reduced.
+
 ### Enslavement
 
 ### Block Diagram of the Complete System
