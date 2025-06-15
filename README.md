@@ -81,6 +81,7 @@ Multiplying $T_Q$ by the current constant $\frac{1}{K_T}$ yields a current that 
 ### Enslavement
 
 The weapon is controlled through the observation system. For this purpose, state-space controllers were designed that also meet the given control requirements, and they allow for tracking targets and provide a proper tracking error for each axis separately.
+The binding is based on returning the angle difference between the weapon and the observation pod to the weapon system space-state controller, thereby correcting the weapon system angle.
 
 ### Block Diagram of the Complete System
 
