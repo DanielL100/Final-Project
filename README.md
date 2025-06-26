@@ -65,7 +65,7 @@ With each shot, a strong blow is released back along the barrel axis, creating a
 ### FeedForward Techniques
 
 #### Differentiator
-The ground disturbances are measured by attaching a gyroscope to the gun on each axis and measuring when the vehicle is traveling on a track with a speed of 25 km/h. The disturbance velocity measurement $ω_{disturbance}$ is derived in time and converted to a moment of inertia, using the motor inertia J_M :<br>
+The ground disturbances are measured by attaching a gyroscope to the gun on each axis and measuring when the vehicle is traveling on a track with a speed of 25 km/h. The disturbance velocity measurement $ω_{disturbance}$ is derived in time and converted to a moment of inertia, using the motor inertia $J_M$ :<br>
 $I_{diff}^{Control}=\frac{-J_M}{K_T}*\frac{d}{dt}(ω_{disturbance})$<br>
 This contribution returns a current proportional to the disturbance acceleration to the motor.
 
