@@ -90,10 +90,11 @@ The complete system implementation is given by the following block diagram:
 ### Prerequisites
 * Matlab version R2020b or later
 * Simulink
+* Simulnk library, "Control System Designer"
 * [Project directory](Project)
 
 ### Installation
-1. Download and install Matlab with Simulink from [Matlab website](https://www.mathworks.com/products/matlab.html).
+1. Download and install Matlab with Simulink from [Matlab website](https://www.mathworks.com/products/matlab.html). Do not foreget to install "Control System Designer" library.
 2. Download the [Project directory](Project).
 3. Change the folder path in Matlab to the location of the folder from previous stage.
 4. Run the 'load_files.m' file in Matlab.
