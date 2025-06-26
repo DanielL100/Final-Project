@@ -38,6 +38,7 @@ This is to meet a number of defined requirements:
 - Gain of over 20 dB at 1 Hz
 - Phase margin of over 40°
 - Gain margin of over 6 dB
+- Step response with overshoot up to 25%
 
 ### Non-Linear Control
 
